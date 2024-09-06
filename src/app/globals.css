@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+body{
+  background-color: #1d1d1d;
+}
+
+.bgColor{
+  background-color: #1d1d1d;
+}
+
+.textColor{
+  color: #DCF1F4;
+}
+
+.borderColor{
+  border-color: #525252;
+}
+
+.btnColor{
+  background-color: #1ea3b5;
+}
+
+.bgGradient{
+  background: linear-gradient(180deg, #152729 -42.59%, rgba(0, 0, 0, 0) -42.59%, #202a34 -42.58%, rgba(42, 171, 197, 0.18) 4.35%, rgba(151, 60, 68, 0.055) 99.99%, rgba(185, 54, 245, 0) 100%);;
+}
+
+.btnBorderColor{
+  border-color: #18a2b4;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+/* DropDown Css */
+
+/* General styling */
+
+nav {
+  background-color: #111;
+  padding: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.dropbtn {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  width: 200px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hover-menu {
+  position: relative;
+}
+
+.hover-menu a {
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hover-menu a:hover {
+  background-color: #555;
+}
+
+/* Right-side submenu styling */
+.submenu-content, .option-submenu {
+  display: none; /* Hide by default and only show on hover */
+  position: absolute;
+  left: 100%; /* Position to the right of the parent menu */
+  top: 0;
+  background-color: #444;
+  min-width: 200px;
+  z-index: 2; /* Ensure it's on top of other content */
+}
+
+/* Show the submenu when hovering over the parent menu item */
+.hover-menu:hover .submenu-content, .hover-option:hover .option-submenu {
+  display: block;
+}
+
+.submenu-token, .submenu-nft {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu-token li, .submenu-nft li {
+  padding: 10px;
+}
+
+.submenu-token li a, .submenu-nft li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu-token li a:hover, .submenu-nft li a:hover {
+  background-color: #666;
+}
+
+.option-submenu {
+  left: 0; /* Display below the option */
+  top: 100%;
+}
