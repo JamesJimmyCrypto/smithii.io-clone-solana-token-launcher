@@ -9,6 +9,7 @@ import { MdOutlineNightlight } from "react-icons/md";
 import { DropdownBtn } from './DropDownBtn';
 import { Dialogue } from './Dialogue';
 import { HiOutlineExternalLink } from "react-icons/hi";
+import PriorityFees from './priorityFees';
 
 
 const Navbar = ({ setOpen, open }) => {
@@ -30,7 +31,7 @@ const Navbar = ({ setOpen, open }) => {
             <NavbarDropDown />
           </div>
         </div>
-        <div className='flex'>
+        <div className='flex gap-5 items-center'>
           <div>
             {darkMode ? (
               <MdOutlineLightMode onClick={modeClick} size={30} color='#fff' />
@@ -38,9 +39,11 @@ const Navbar = ({ setOpen, open }) => {
               <MdOutlineNightlight onClick={modeClick} size={30} color='#fff' />
             )}
           </div>
-
+          <div className='flex gap-3'>
+          <PriorityFees/>
           <DropdownBtn />
           <Dialogue />
+          </div>
         </div>
       </div>
       <div className='text-white flex justify-center bg-[#15292c] py-3'>
