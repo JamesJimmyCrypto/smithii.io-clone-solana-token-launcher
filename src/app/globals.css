@@ -165,3 +165,18 @@ nav {
   left: 0; /* Display below the option */
   top: 100%;
 }
+
+.dropdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 600px; /* Adjust width as necessary */
+}
+
+.dropdown-column {
+  padding: 16px; /* Space inside each column */
+  border-right: 1px solid #333; /* Border between columns */
+}
+
+.dropdown-details {
+  padding: 16px;
+}
